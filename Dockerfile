@@ -21,4 +21,5 @@ WORKDIR /tmp
 RUN cp -a /tmp/image-common-master/etc /etc/JARVICE && chmod 755 /etc/JARVICE && rm -rf /tmp/image-common-master && mkdir -m 0755 /data && chown nimbix:nimbix /data
 
 RUN mkdir -p /usr/lib/powerpc64le-linux-gnu
+RUN yum -y install passwd && yum clean all
 
