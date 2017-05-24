@@ -20,6 +20,6 @@ RUN ln -s websockify /usr/lib/JARVICE/tools/noVNC/utils/websockify.py && ln -s w
 WORKDIR /tmp
 RUN cp -a /tmp/image-common-master/etc /etc/JARVICE && chmod 755 /etc/JARVICE && rm -rf /tmp/image-common-master && mkdir -m 0755 /data && chown nimbix:nimbix /data
 
-RUN mkdir -p /usr/lib/powerpc64le-linux-gnu
+RUN ln -s /usr/local/cuda-8.0/targets/ppc64le-linux/lib /usr/lib/powerpc64le-linux-gnu
 RUN yum -y install passwd && yum clean all
 
